@@ -1,0 +1,478 @@
+:root {
+  /* --bgcolor: #000;*/
+  --bgcolor: #353a40; /*VARIABLE CON EL COLOR backgroundcolor*/
+  --textcolor: #fffbfb; /*texto que tenga el color blanco*/
+  --bgbtn: #29a744;
+  --footercolor: #1e516e;
+  --bordercolor: #f1ebeb;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /*para que las cajas no se desordenen*/
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: var(--bgcolor);
+  height: 4em; /*tamaño del header*/
+  color: var(--textcolor);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  .logo {
+    /*la clase: logo, contiene a la imagen */
+    display: inline-block; /*agrega esto ahora */
+    margin-left: 2em;
+    color: var(--textcolor);
+    align-items: start;
+
+    & img {
+      height: 4em;
+      vertical-align: middle; /*configura en la linea media y al lado de la imagen*/
+    }
+    & h2 {
+      display: inline-block; /*que se posisicone a la par de la imagen*/
+      align-items: start;
+      margin-right: 5em;
+    }
+  }
+  & nav {
+    /* aninamiento de estilo en una etiqueta*/
+    float: right;
+    padding: 2em; /*1.5em  2em*/ /* aca es diferente*/
+    display: flex;
+    padding: 1.5em 2em;
+
+    justify-content: end;
+    width: 100%; /*se añadio esta porcion de codigo para que no se caiga el texto de los links al acicar la pantalla*/
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    /* align-self: flex-end;*/
+
+    & a {
+      text-decoration: none;
+      color: var(--textcolor);
+      margin: 0 0.5em;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .ticket {
+      color: var(--bgbtn);
+    }
+  }
+}
+
+/*Esto es para el texto que esta en la imagen principal*/
+
+main {
+  overflow: hidden;
+  .principal {
+    position: relative;
+    & img {
+      filter: brightness(0.5);
+      height: 5%;
+    }
+    .content-principal {
+      position: absolute;
+      width: 40vw;
+      color: var(--textcolor);
+      top: 50vh;
+      text-align: right;
+      right: 4em;
+      /*margin: 2em 0;*/
+      line-height: 1.5em;
+
+      & p {
+        text-align: end;
+        display: flex;
+        flex-flow: wrap;
+        line-height: 1.5em 0;
+        padding: 24px 0;
+        flex-flow: wrap-reverse;
+     
+
+        /*margin: 1.5em 0;*/
+
+        /* padding: 20px 0px;
+        line-height: 1.5em;*/
+      }
+      & a {
+        border: 1px solid var(--textcolor);
+        border-radius: 5px;
+        text-decoration: none;
+        color: var(--textcolor);
+        padding: 15px 20px;
+        margin: 0 10px;
+  
+      }
+      .btn-color {
+        background-color: var(--bgbtn);
+        border: 1px solid var(--bgbtn);
+      }
+    }
+  }
+}
+
+.grid-content {
+  display: grid;
+  grid-template-areas:
+    "orador orador"
+    "paisaje descrip"
+    "formulario formulario";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto auto;
+  /*& div[class^="item"] {
+    border: 2px solid purple;
+  }*/
+
+  .item-1 {
+    grid-area: orador;
+    .title {
+      text-align: center;
+      font-style: normal;
+      padding-top: 20px;
+    }
+
+    .content-card {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      margin: 2em;
+      /*padding: 10px; /*cambiar*/
+
+      & div[class^="card"] {
+        width: 250px;
+        border: solid 0.5px var(--bordercolor);
+        padding: 0px; /* Espaciado alrededor de cada tarjeta */
+        margin: 20px; /* Margen entre las tarjetas */
+        text-align: center;
+
+        & img {
+          width: 100%;
+          /*height: 55%;*/ /*puede que este de mas */
+        }
+
+        & h4 {
+          padding: 10px;
+          margin: 0 10px;
+        }
+
+        .amarillo {
+          margin: 2px;
+          padding: 3px;
+          background-color: #ffc10c;
+          color: black;
+          text-decoration: none;
+          border: none;
+          display: inline-block;
+          font-weight: 700;
+          padding: 0.35em 0.65em;
+          font-size: 0.75em;
+          font-weight: 700;
+          line-height: 1;
+          text-align: center;
+          border-radius: 0.25rem;
+        }
+
+        /* Estilo para el botón celeste */
+        .cian {
+          background-color: #0dcaf0;
+          text-decoration: none;
+          border: none;
+          display: inline-block;
+          padding: 0.35em 0.65em;
+          font-size: 0.75em;
+          font-weight: 700;
+          margin: 2px;
+          padding: 3px;
+          line-height: 1;
+          color: black;
+          border-radius: 0.25rem;
+        }
+
+        .gris {
+          margin: 2px;
+          padding: 3px;
+          background-color: #6c757d;
+          text-decoration: none;
+          border: none;
+          display: inline-block;
+          padding: 0.35em 0.65em;
+          font-size: 0.75em;
+          font-weight: 700;
+          line-height: 1;
+          color: #fff;
+          border-radius: 0.25rem;
+        }
+
+        .rojito {
+          margin: 2px;
+          padding: 3px;
+          background-color: #dc3545;
+          text-decoration: none;
+          border: none;
+          display: inline-block;
+          padding: 0.35em 0.65em;
+          font-size: 0.75em;
+          font-weight: 700;
+          line-height: 1;
+          color: black;
+          border-radius: 0.25rem;
+        }
+
+        & p {
+          padding: 10px;
+          max-width: 4;
+        }
+      }
+    }
+  }
+
+  /*revisar llaves en el video del profe*/
+  .item-2 {
+    grid-area: paisaje;
+    display: flex;
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .item-3 {
+    grid-area: descrip;
+    display: flex;
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
+    padding: 1em;
+    line-height: 1.5em; /*puede que este de mas*/
+    & p {
+      margin: 1.5em 0;
+    }
+    & a {
+      border: 1px solid var(--textcolor);
+      border-radius: 3px; /*redondea el boton*/
+      color: var(--textcolor);
+      text-decoration: none;
+      padding: 1.5%;
+    }
+  }
+  .item-4 {
+    grid-area: formulario;
+    flex-flow: column;
+    justify-content: center;
+    width: 50%;
+    margin: 2px;
+    padding: 3px;
+    margin-top: 10px;
+    margin-left: 25%;
+    display: flex;
+    & .con {
+      text-align: center;
+      font-style: normal;
+      justify-content: center;
+      text-align: center;
+    }
+
+    & form {
+      display: flex;
+      flex-flow: column;
+      /*align-items: center;*/
+      margin: 18px;
+      border-radius: 20px;
+      display: flex;
+    }
+    & input,
+    textarea {
+      border: solid 1px;
+      margin: 5px;
+      justify-content: center;
+      display: flex;
+      margin-bottom: 1.5rem;
+    }
+    #enviar {
+      background-color: #96c93e;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      border: 5px;
+      font-size: medium;
+      border-radius: 6px;
+      padding: 12px;
+      color: var(--textcolor);
+    }
+    #nombre,
+    #apellido {
+      border-radius: 3px;
+      padding: 10px;
+      justify-content: space-between;
+      display: flex;
+      display: inline-block;
+      align-items: center;
+    }
+    #comenta {
+      border-radius: 3px;
+      padding: auto;
+      margin: 5;
+    }
+
+    .input-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      display: inline-block;
+      padding: auto;
+      margin: 5px;
+      display: inline-block;
+    }
+
+    .input-container input {
+      flex: 1; /* Los campos de entrada ocupan el espacio disponible */
+      margin-right: 5px; /* Espacio entre los campos de entrada */
+      display: flex;
+      padding: auto;
+      display: inline-block;
+    }
+  }
+}
+.footer {
+  background-color: var(--footercolor);
+  height: 5em;
+  text-align: center;
+  padding: 1em 0;
+  /* Centrar verticalmente el footer */
+  padding-top: 2%;
+  margin-top: auto;
+  /*padding: 1em 0;
+  text-align: center;
+  margin-top: auto;
+  display: flex;
+  padding: 10px;
+  width: 100%;*/
+
+  & nav {
+    background-color: #000;
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    margin-right: 20px;
+    flex-wrap: nowrap;
+    /* align-self: flex-end;*/
+  }
+  & a {
+    text-align: center;
+    text-decoration: none;
+    color: var(--textcolor);
+    margin: 2em 0.5em;
+    right: 5em;
+    height: 4em; /*tamaño del header*/
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    height: auto;
+  }
+
+  header nav {
+    float: none;
+    width: 100%;
+    justify-content: center;
+    padding: 1em;
+  }
+
+  header nav a {
+    margin: 0.5em;
+  }
+
+  main .content-principal {
+    width: 80%;
+    right: 0;
+  }
+
+  .grid-content {
+    grid-template-columns: 100%;
+  }
+
+  .item-4 {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .footer nav {
+    justify-content: center;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .footer a {
+    margin: 0.5em;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer {
+    width: max-content;
+  }
+  .grid-content2 {
+    width: 100%;
+  }
+  .item-2,
+  .item-3 {
+    width: 100vw;
+  }
+  textarea {
+    
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  * .footer {
+    width: max-content;
+  }
+  .principal {
+    order: 1;
+  }
+  .main {
+    order: 2;
+  }
+  .grid-content {
+    order: 3;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  * .footer {
+    width: 100%;
+  }
+  .principal {
+    order: 1;
+  }
+  .main {
+    order: 2;
+  }
+  .grid-content {
+    order: 3;
+  }
+}
+
+
+
+

@@ -1,0 +1,14 @@
+
+  @media (min-width: 992px) {
+    .btn-compra-tickets {
+      border: 1px solid transparent;
+      border-radius: .8rem;
+    }
+    .btn-compra-tickets:hover,
+    .navbar-dark .navbar-nav .btn-compra-tickets.active {
+      background: #25a342;
+    }
+  }
+ 
+
+

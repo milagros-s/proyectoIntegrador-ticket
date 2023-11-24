@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=initial-scalentegrador"/>
+    <title>Proy. Integrador</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./asset/img/codoacodo.png" alt="" />
+        <h2>Conf Bs As</h2>
+      </div>
+
+      <nav>
+        <a href="#">La conferencia</a>
+        <a href="#oradores">Los oradores</a>
+        <a href="#lugar">El lugar y la fecha</a>
+        <a href="#conviertete">Coviértete en orador</a>
+        <a class="ticket" href="./pages/ticket.html">Comprar ticket</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="principal">
+        <img
+          src="./asset/img/ba1.jpg"
+          alt="Imagen de Palacio de las Aguas de Buenos Aires"
+        />
+        <div class="content-principal">
+          <h1>Conf Bs As</h1>
+          <p>
+            Bs As llega por primera vez a Argentina. Un evento para compartir
+            con nuestra comunidad el conocimiento y experiencia de los expertos
+            que están creando el futuro del internet. Ven a conocer a miembros
+            del evento, a otros estudiantes de Codo Codo y los oradores del
+            primernivel que tenemos para ti. Te esperamos!
+          </p>
+          <a href="#conviertete">Quiero ser orador</a>
+          <a class="btn-color" href="./pages/ticket.html">Comprar tickets</a>
+        </div>
+      </section>
+    </main>
+
+    <div class="grid-content" id="oradores">
+      <div class="item-1">
+        <div class="title">
+          <h4>CONOCE A LOS</h4>
+          <h2>ORADORES</h2>
+        </div>
+
+        <div class="content-card">
+          <div class="card-1">
+            <img src="./asset/img/steve.jpg" alt="" />
+
+            <a
+              class="amarillo"
+              href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
+              >Javascript</a
+            >
+            <a class="cian" href="https://es.wikipedia.org/wiki/React">React</a>
+            <h4 class="card-title">Steve Jobs</h4>
+            <p>
+              Steve Jobs (24 de febrero de 1955 - 5 de octubre de 2011) fue un
+              visionario tecnológico y co-fundador de Apple Inc. Su enfoque en
+              diseño innovador y experiencia del usuario transformó la
+              industria. Lideró el desarrollo de productos icónicos como la
+              Macintosh, iPod, iPhone y iPad, dejando un legado duradero en la
+              historia de la tecnología y la innovación.
+            </p>
+          </div>
+          <div class="card-2">
+            <img src="./asset/img/bill.jpg" alt="" />
+            <a
+              class="amarillo"
+              href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
+              >Javascript</a
+            >
+            <a class="cian" href="https://es.wikipedia.org/wiki/React">React</a>
+            <h4 class="card-title">Bill Gates</h4>
+            <p>
+              Bill Gates, nacido el 28 de octubre de 1955, es un empresario y
+              filántropo estadounidense. Fundador de Microsoft en 1975, Gates
+              fue pionero en la revolución de la computadora personal. Su visión
+              y liderazgo contribuyeron al éxito de Windows y Office. Es uno de
+              los empresarios más ricos del mundo.
+            </p>
+          </div>
+          <div class="card-3">
+            <img src="./asset/img/ada.jpeg" alt="" />
+            <a class="gris" href="https://es.wikipedia.org/wiki/Negocio"
+              >Negocios</a
+            >
+            <a
+              class="rojito"
+              href="https://es.wikipedia.org/wiki/Empresa_emergente"
+              >Startups</a
+            >
+            <h4 class="card-title">Ada Lovelace</h4>
+            <p>
+              Ada Lovelace (10 de diciembre de 1815 - 27 de noviembre de 1852)
+              fue una matemática y escritora británica, conocida como la primera
+              programadora de la historia. Colaboró con Charles Babbage en el
+              desarrollo del motor analítico, y sus notas detalladas incluyeron
+              el primer algoritmo destinado a ser procesado por una máquina,
+              estableciendo así las bases de la programación informática.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="item-2">
+        <img src="./asset/img/honolulu.jpg" alt="" />
+      </div>
+
+      <div class="item-3" id="lugar">
+        <div class="descrip">
+          <h1>Bs As - Octubre</h1>
+          <p>
+            Buenos Aires es la provincia y localidad más grande del estado de
+            Argentina, en los Estaods Unidos. Honolulu es la más sureña de entre
+            las principales ciudades estaunidenses.Aunque el nombre de Honolulu
+            se refiere al área urbana en la costa sureña de la isla Oahu, la
+            ciudad y el candado de Honolulu han formado una ciudad-condado
+            consolidada que cubre toda la cuidad (aproximadamente 600 km² de
+            superficie).
+          </p>
+          <a href="#conviertete">Conocé más</a>
+        </div>
+      </div>
+      <div class="item-4" id="conviertete">
+        <div class="con">
+          <h4>Conviértete en un</h4>
+          <h2><span>orador</span></h2>
+        </div>
+        <!-- <div class="texto">Anótate como orador para dar una charla ignite. Cuéntanos de qué quieres hablar!</div> -->
+        <form action="">
+          <div class="input-container">
+            <input type="text" placeholder="Nombre" name="nombre" id="nombre" size="43"/>
+            <input type="text" placeholder="Apellido"  name="apellido" id="apellido" size="43" />
+          </div>
+          <textarea
+            name="comenta"
+            placeholder="Sobre qué quieres hablar?"
+            cols="120"
+            rows="10"
+            id="comenta"
+          ></textarea>
+          <input type="submit" value="Enviar" name="" id="enviar" />
+        </form>
+        <!-- <div class="form-text mb-3">Recuerda incluir un título para tu charla.</div> -->
+      </div>
+    </div>
+
+    <footer>
+      <nav class="footer">
+        <a href="#">Preguntas Frecuentes</a>
+        <a href="#">Contáctanos</a>
+        <a href="#">Conferencia</a>
+        <a href="#">Términos y Condiciones</a>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Estudiante</a>
+      </nav>
+    </footer>
+  </body>
+</html>
